@@ -42,7 +42,6 @@ export default function ConsultasPage() {
   const handleScheduleAppointment = (e: React.FormEvent) => {
     e.preventDefault()
     setIsDialogOpen(false)
-    // Aqui você adicionaria a lógica para salvar a consulta
   }
 
   return (
@@ -52,15 +51,15 @@ export default function ConsultasPage() {
       <div className="flex">
         <HospitalSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-        <main className="flex-1 p-4 lg:p-6 overflow-y-auto">
-          <div className="mb-4 lg:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <main className="flex-1 p-4 lg:p-6 overflow-y-auto scrollbar-thin">
+          <div className="mb-4 lg:mb-6 animate-fade-in-up opacity-0 [animation-delay:0ms] [animation-fill-mode:forwards]">
             <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Minhas Consultas</h1>
             <p className="text-sm lg:text-base text-gray-600">Acompanhe suas consultas agendadas</p>
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-6">
             {/* Calendar Section */}
-            <Card className="animate-in fade-in slide-in-from-left-4 duration-500 delay-100">
+            <Card className="animate-fade-in-left opacity-0 [animation-delay:100ms] [animation-fill-mode:forwards]">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between text-base lg:text-lg">
                   <span>Calendário</span>
@@ -127,7 +126,7 @@ export default function ConsultasPage() {
             </Card>
 
             {/* Selected Date Section */}
-            <Card className="animate-in fade-in slide-in-from-right-4 duration-500 delay-100">
+            <Card className="animate-fade-in-right opacity-0 [animation-delay:100ms] [animation-fill-mode:forwards]">
               <CardHeader>
                 <CardTitle className="capitalize text-base lg:text-lg">{selectedDate}</CardTitle>
               </CardHeader>

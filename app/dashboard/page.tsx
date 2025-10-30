@@ -18,8 +18,8 @@ export default function DashboardPage() {
       <div className="flex">
         <HospitalSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-        <main className="flex-1 p-4 lg:p-6 overflow-y-auto">
-          <div className="mb-4 lg:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <main className="flex-1 p-4 lg:p-6 overflow-y-auto scrollbar-thin">
+          <div className="mb-4 lg:mb-6 animate-fade-in-up opacity-0 [animation-delay:0ms] [animation-fill-mode:forwards]">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-1">Minha Área</h1>
@@ -34,7 +34,7 @@ export default function DashboardPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-6 lg:mb-8">
             <Link href="/consultas">
-              <Card className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-300 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
+              <Card className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-300 animate-fade-in-up opacity-0 [animation-delay:100ms] [animation-fill-mode:forwards]">
                 <CardContent className="p-4 lg:p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -53,7 +53,7 @@ export default function DashboardPage() {
             </Link>
 
             <Link href="/exames">
-              <Card className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-green-300 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-200">
+              <Card className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-green-300 animate-fade-in-up opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
                 <CardContent className="p-4 lg:p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -71,7 +71,7 @@ export default function DashboardPage() {
               </Card>
             </Link>
 
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300 sm:col-span-2 lg:col-span-1">
+            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up opacity-0 [animation-delay:300ms] [animation-fill-mode:forwards] sm:col-span-2 lg:col-span-1">
               <CardContent className="p-4 lg:p-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -89,7 +89,7 @@ export default function DashboardPage() {
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-6">
             {/* Próximas Consultas */}
-            <Card className="animate-in fade-in slide-in-from-left-4 duration-500 delay-400">
+            <Card className="animate-fade-in-left opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-base lg:text-lg">
                   <Calendar className="w-4 h-4 lg:w-5 lg:h-5 text-blue-600" />
@@ -136,7 +136,7 @@ export default function DashboardPage() {
             </Card>
 
             {/* Exames Recentes */}
-            <Card className="animate-in fade-in slide-in-from-right-4 duration-500 delay-400">
+            <Card className="animate-fade-in-right opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-base lg:text-lg">
                   <FileText className="w-4 h-4 lg:w-5 lg:h-5 text-green-600" />
