@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Heart, Shield, Users } from "lucide-react"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
 
 export default function LoginPage() {
   const [userType, setUserType] = useState<"patient" | "professional">("patient")
@@ -26,15 +25,10 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gray-50 flex">
       {/* Left Side - Branding and Image */}
       <div className="flex-1 flex flex-col justify-center px-12 py-8">
+        {/* Logo and Title */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-16 h-16 relative">
-            <Image
-              src="/logo-hospital-solarium.png"
-              alt="Hospital Solarium"
-              width={64}
-              height={64}
-              className="object-contain"
-            />
+          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+            <Heart className="w-6 h-6 text-white fill-white" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Hospital Solarium</h1>
         </div>
@@ -169,13 +163,9 @@ export default function LoginPage() {
           <div className="text-center mt-6 space-y-2">
             <p className="text-sm text-gray-600">
               Não tem uma conta?{" "}
-              <button
-                type="button"
-                onClick={() => router.push("/cadastro")}
-                className="text-blue-600 hover:underline font-medium"
-              >
+              <a href="#" className="text-blue-600 hover:underline font-medium">
                 Cadastre-se
-              </button>
+              </a>
             </p>
             <p>
               <a href="#" className="text-sm text-blue-600 hover:underline">

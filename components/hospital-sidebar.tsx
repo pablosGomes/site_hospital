@@ -12,10 +12,10 @@ import {
   Phone,
   Settings,
   LogOut,
+  Heart,
   X,
 } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 interface SidebarProps {
   className?: string
@@ -54,17 +54,12 @@ export function HospitalSidebar({ className, isOpen = true, onClose }: SidebarPr
           ${className}
         `}
       >
+        {/* Logo Section */}
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 relative flex-shrink-0">
-                <Image
-                  src="/logo-hospital-solarium.png"
-                  alt="Hospital Solarium"
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                />
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                <Heart className="w-5 h-5 text-white fill-white" />
               </div>
               <div>
                 <h2 className="text-base font-bold text-gray-900">Hospital Solarium</h2>
