@@ -12,6 +12,8 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["@/components/ui"],
   },
+  poweredByHeader: false,
+  compress: true,
 }
 
 export default nextConfig
